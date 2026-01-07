@@ -6,11 +6,6 @@ Created on Tue Jan  6 20:53:48 2026
 """
 
 # my_app.py
-           
-                
-                
-                
-                
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -51,8 +46,8 @@ if uploaded_file:
 
     # 3. Profiling
     if st.checkbox("Generate Deep Insights"):
-        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
-                                                                                             'creator':'N.DRISSI'})#,samples=None)#sample none for safe report to not show data
+        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True)#,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
+#                                                                                             'creator':'N.DRISSI'})#,samples=None)#sample none for safe report to not show data
 
         st.components.v1.html(profile.to_html(), height=600, scrolling=True)
 
