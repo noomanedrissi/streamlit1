@@ -9,7 +9,7 @@ Created on Tue Jan  6 20:53:48 2026
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from ydata_profiling import ProfileReport
+from ydata_profiling import ProfileReport
 from scipy import stats
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -45,8 +45,8 @@ if uploaded_file:
         st.dataframe(df_encoded.head())
 
     # 3. Profiling
- #    if st.checkbox("Generate Deep Insights"):
-#        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True)#,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
+    if st.checkbox("Generate Deep Insights"):
+        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True)#,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
 #                                                                                             'creator':'N.DRISSI'})#,samples=None)#sample none for safe report to not show data
 
 #        st.components.v1.html(profile.to_html(), height=600, scrolling=True)
