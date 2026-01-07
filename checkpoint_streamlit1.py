@@ -46,7 +46,7 @@ if uploaded_file:
 
     # 3. Profiling
     if st.checkbox("Generate Deep Insights"):
-        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True)#,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
+#        profile=ProfileReport(df,title='Pandas Profiling Report',explorative=True)#,dataset={'description':'this data contains Expresso Churn Prediction Challenge',
 #                                                                                             'creator':'N.DRISSI'})#,samples=None)#sample none for safe report to not show data
 
         st.components.v1.html(profile.to_html(), height=600, scrolling=True)
