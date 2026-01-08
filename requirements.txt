@@ -1,4 +1,4 @@
 streamlit
 pandas
-ydata_profiling
-train_test_split
+ydata-profiling
+scikit-learn
